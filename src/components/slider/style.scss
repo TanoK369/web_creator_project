@@ -1,0 +1,46 @@
+@import "../../config.scss";
+
+.slider{
+    h2{
+        font-size: 32px;
+    }
+    .owl-nav{
+        button.owl-next{
+            position: absolute;
+            right: 0;
+            background-image: url(../../assets/img/arrow_r.png);
+            width: 32px;
+            height: 32px;
+            &:hover{
+                background: $white;
+                background-image: url(../../assets/img/arrow_rh.png);
+                transition: background-image 0.3s ease;
+            }
+        }
+        button.owl-prev{
+            position: absolute;
+            left: 0;
+            background-image: url(../../assets/img/arrow_l.png);
+            width: 32px;
+            height: 32px;
+            &:hover{
+                background: $white;
+                background-image: url(../../assets/img/arrow_lh.png);
+                transition: background-image 0.3s ease;
+            }
+        }
+    } 
+    .owl-dots{
+        padding-top: 10px;
+        .owl-dot{
+           span {
+            background: $grey;
+           }
+           &.active{
+                span {
+                    background: $gradient;
+                }
+           }
+        } 
+    }
+}

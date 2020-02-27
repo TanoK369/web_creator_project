@@ -1,0 +1,59 @@
+@import "../../config.scss";
+
+.input {
+   &.form-group{
+      height: 100%;
+   }
+   & &__date {
+      background-image: url('../../assets/img/date.png');
+      background-size: 22px 24px;
+      background-repeat: no-repeat;
+      background-position: bottom 6px right 12px;
+      &:focus {
+         border: 1px solid $gold;
+         box-shadow: none;
+      }
+   }
+   & &__text, & &__textarea{
+      &:focus {
+         border: 1px solid $gold;
+         box-shadow: none;
+      }
+   }
+   & &__textarea{
+      height: calc(100% - 48px);
+      @media (max-width: 768px) {
+         height: initial;
+      }
+   }
+   & &__checkbox{
+      span{
+         font-size: 12px;
+      }
+      a{
+         text-decoration: none;
+         color: $gold;
+      }
+      .custom-control-input{
+         &:focus~.custom-control-label::before{
+            border: 1px solid $gold;
+            box-shadow: none;
+         }
+         &:checked~.custom-control-label{
+            &:before{
+               background-image: url('../../assets/img/vector.png');
+               background-color: initial;
+               background-size: 80%;
+               background-repeat: no-repeat;
+               background-position: center center;
+            }
+            &:after{
+               background-image: initial;
+            }
+         }
+      }
+   }
+   & .react-datepicker-wrapper{
+      width: 100%;
+   }
+} 
